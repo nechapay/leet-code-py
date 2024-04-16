@@ -1,0 +1,9 @@
+.git
+.gitigonre
+.idea
+.vscode
+out
+gen
+.task
+git.sh
+__pycache__
