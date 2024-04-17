@@ -1,28 +1,33 @@
 # Given a string s, return the longest palindromic substring in s.
+
 def longestPalindrome(s):
+    '''Manacher’s Algorithm'''
     st = list(s)
     st2 = ['#']*(len(s)*2 + 1)
 
     for i in range(len(st)):
         st2[2*i+1] = st[i]
-    p = [0]*len(st2)
-    c = r = idx = mx = i_mir = 0
-    for i in range(len(st2)):
-        i_mir = 2*c - i
 
-        p[i] = min(p[i_mir], r-i) if r > i else 0
+    p = [0]*len(st2)
+    center = radius = idx = max_len = i_mir = 0
+
+    for i in range(len(st2)):
+        i_mir = 2*center - i
+
+        p[i] = min(p[i_mir], radius-i) if radius > i else 0
 
         while i > p[i] and i + 1 + p[i] < len(st2) and st2[i-1-p[i]] == st2[i+1 + p[i]]:
             p[i] += 1
-        if p[i] + i > r:
-            r = p[i]+i
-            c = i
 
-        if mx < p[i]:
+        if radius < p[i] + i:
+            radius = p[i]+i
+            center = i
+
+        if max_len < p[i]:
             idx = i
-            mx = p[i]
+            max_len = p[i]
 
-    return ''.join(list(''.join(st2)[idx-mx:idx+mx].split('#')))
+    return ''.join(list(''.join(st2)[idx-max_len:idx+max_len].split('#')))
 
 
 def longestPalindrome2(s):
