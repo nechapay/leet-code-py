@@ -4,11 +4,7 @@
 
 # You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
+from utils import *
 
 def addTwoNumbers(l1, l2):
     head = ListNode()
@@ -33,21 +29,6 @@ def addTwoNumbers(l1, l2):
     return head.next
 
 
-def arr_to_linked_list(arr):
-    h = ListNode()
-    t = h
-    for i in arr:
-        t.next = ListNode(i)
-        t = t.next
-    return h.next
-
-
-def linked_list_to_arr(head):
-    arr = []
-    while head:
-        arr.append(head.val)
-        head = head.next
-    return arr
 
 
 l1 = arr_to_linked_list([2, 4, 3])

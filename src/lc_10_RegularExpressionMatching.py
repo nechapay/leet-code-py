@@ -27,17 +27,5 @@ def isMatch(s: str, p: str) -> bool:
 
     return dp[m][n]
 
-
-def print_matrix(mtx, s=''):
-    print(s)
-    for i in range(len(mtx)):
-        print('|', end=" ")
-        for j in range(len(mtx[i])):
-            elem = 1 if mtx[i][j] else 0
-            print(elem, end=" ")
-        print("|")
-    return ''
-
-
 if __name__ == '__main__':
     print(isMatch("ab", ".*"))
