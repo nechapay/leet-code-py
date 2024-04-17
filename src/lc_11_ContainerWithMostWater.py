@@ -7,18 +7,20 @@ def maxArea(height):
     if len(height) < 2:
         return 0
 
-    n = 0
-    m = len(height) - 1
+    l = 0
+    r = len(height) - 1
+    mxH = max(height)
     mx = 0
 
-    while n < m:
-        dx = min(height[n], height[m])
-        mx = max(mx, dx * (m-n))
-        if height[m] > height[n]:
-            n += 1
+    while l < r:
+        dx = min(height[l], height[r])
+        mx = max(mx, dx * (r-l))
+        if height[r] > height[l]:
+            l += 1
         else:
-            m -= 1
-
+            r -= 1
+        if mxH * (r-l) <= mx:
+            break
     return mx
 
 
