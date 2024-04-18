@@ -2,7 +2,7 @@ import unittest
 from lc_9_PalindromeNumber import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestPalindromeNumber(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(isPalindrome(121), True)
         self.assertEqual(isPalindrome(-121), False)

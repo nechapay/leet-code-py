@@ -2,7 +2,7 @@ import unittest
 from lc_15_3Sum import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class Test3Sum(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(
             threeSum([-1, 0, 1, 2, -1, -4]), [[-1, -1, 2], [-1, 0, 1]])

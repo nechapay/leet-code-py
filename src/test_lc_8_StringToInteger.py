@@ -2,7 +2,7 @@ import unittest
 from lc_8_StringToInteger import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestStringToInteger(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(myAtoi("42"), 42)
         self.assertEqual(myAtoi("    -42"), -42)

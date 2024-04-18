@@ -2,7 +2,7 @@ import unittest
 from lc_14_LongestCommonPrefix import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestLongestCommonPrefix(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(longestCommonPrefix(
             ["flower", "flow", "flight"]), "fl")

@@ -2,7 +2,7 @@ import unittest
 from lc_11_ContainerWithMostWater import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestContainerWithMostWater(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]), 49)
 

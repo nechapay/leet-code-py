@@ -2,7 +2,7 @@ import unittest
 from lc_10_RegularExpressionMatching import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestRegularExpressionMatching(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(isMatch("aa", "a"), False)
 

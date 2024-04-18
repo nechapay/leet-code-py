@@ -2,7 +2,7 @@ import unittest
 from lc_12_IntegerToRoman import *
 
 
-class TestAddTwoNumbers(unittest.TestCase):
+class TestIntegerToRoman(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(intToRoman(3), 'III')
         self.assertEqual(intToRoman(4), 'IV')

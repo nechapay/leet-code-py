@@ -2,7 +2,7 @@ import unittest
 from lc_6_ZigzagConversion import *
 
 
-class TestTwoSum(unittest.TestCase):
+class TestZigzagConversion(unittest.TestCase):
     def test_equal(self):
         self.assertEqual(convert("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR")
         self.assertEqual(convert("PAYPALISHIRING", 4), "PINALSIGYAHRPI")
