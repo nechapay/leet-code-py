@@ -2,7 +2,7 @@ import unittest
 from lc_24_SwapNodesInPairs import *
 
 
-class TestGenerateParentheses(unittest.TestCase):
+class TestSwapNodesInPairs(unittest.TestCase):
     def test_case1(self):
         head = arr_to_linked_list([1, 2, 3, 4])
         self.assertEqual(linked_list_to_arr(swapPairs(head)), [2, 1, 4, 3])
