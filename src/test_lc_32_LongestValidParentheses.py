@@ -2,7 +2,7 @@ import unittest
 from lc_32_LongestValidParentheses import *
 
 
-class TestNextPermutation(unittest.TestCase):
+class TestLongestValidParentheses(unittest.TestCase):
     def test_case1(self):
         self.assertEqual(longestValidParentheses("(()"), 2)
 
